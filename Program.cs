@@ -59,15 +59,22 @@ do
         Console.WriteLine("Digite a quantidade de meses trabalhados no ultimo ano");
         meses = int.Parse(Console.ReadLine());
 
-        if (meses <= 1 || meses >= 12)
+        if (meses < 1 || meses > 12)
         {
             Console.WriteLine("Numero invalido");
 
-            while (meses <= 1 || meses >= 12) 
+            while (meses < 1 || meses > 12) 
             {
-                Console.WriteLine();
+                Console.WriteLine("Digite a quantidade de meses trabalhados no ultimo ano");
+                meses = int.Parse(Console.ReadLine());
             }
+
+            salario = (salario * meses) / 12;
+
+            Console.WriteLine($"Decimo terceiro a receber {salario}");
+
         }
+
         
   
     }
